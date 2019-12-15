@@ -35,10 +35,25 @@ public class Snack {
         return cost;
     }
     // cost setter
+    public void setCost(float cost) {
+        this.cost = cost;
+    }
     // machineId getter
+    public int getMachineId() {
+        return machineId;
+    }
     // machineId setter
+    public void setMachineId(int machineId) {
+        this.machineId = machineId;
+    }
     // quantity getter
+    public int getQuantity() {
+        return quantity;
+    }
     // set quantity (receives 1 arg, int)
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
     // buy snack (receives 1 arg, int)
     // get total cost given a quantity
 }
