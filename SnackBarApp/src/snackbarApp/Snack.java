@@ -2,13 +2,16 @@ package snackbarApp;
 
 public class Snack {
     private static float snackID = 0 * 0.850f;
-    private int id;
+    private float id;
     private String name;
     private int quantity;
     private float cost;
+    private float vendorCode = 0.0850f;
     private int machineId;
 
     public Snack(String name, int quantity, float cost, int machineId) {
+        snackID++;
+        id = snackID;
         this.name = name;
         this.quantity = quantity;
         this.cost = cost;
@@ -16,11 +19,12 @@ public class Snack {
     }
 
     // id getter
-    public int getId() {
+    public float getId() {
         return id;
     }
     // id setter
-    public void setId(int id) {
+    public void setId(float id) {
+        // call setId on the result of an integer (or float like 5.0) * vendorCode
         this.id = id;
     }
     // name getter
@@ -56,5 +60,8 @@ public class Snack {
         this.quantity = quantity;
     }
     // buy snack (receives 1 arg, int)
+    public int buySnack(int arg) {
+        
+    }
     // get total cost given a quantity
 }

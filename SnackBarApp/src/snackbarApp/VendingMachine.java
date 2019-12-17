@@ -6,7 +6,7 @@ public class VendingMachine {
     private String name;
 
     // constructor
-    public VendingMachine(String name, int id) {
+    public VendingMachine(String name, float id) {
         maxID++;
         id = maxID;
         this.name = name;
