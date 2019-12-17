@@ -1,8 +1,8 @@
 package snackbarApp;
 
 public class VendingMachine {
-    private static int maxID = 0;
-    private int id;
+    private static float maxID = 0 * 0.287f;
+    private float id;
     private String name;
 
     // constructor

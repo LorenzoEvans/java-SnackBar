@@ -1,7 +1,8 @@
 package snackbarApp;
 
 public class Snack {
-    private static int snackID = 0;
+    private static float snackID = 0 * 0.850f;
+    private int id;
     private String name;
     private int quantity;
     private float cost;
