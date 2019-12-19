@@ -1,19 +1,19 @@
 package snackbarApp;
-
-public class Snack {
+public class Snack extends VendingMachine {
     private static float snackID = 0 * 0.850f;
-    private float id;
-    private String name;
+    private float snack_id;
+    private String snack_name;
     private String button;
     private int quantity;
     private float cost;
     private float vendorCode = 0.0850f;
     private int machineId;
-
-    public Snack(String name, int quantity, float cost, int machineId, String button) {
+    
+    public Snack(String snack_name, int quantity, float cost, int machineId, String button, float snack_id, String vending_machine_name, int id) {
+        super(vending_machine_name, id);
         snackID++;
-        id = snackID;
-        this.name = name;
+        snack_id = snackID;
+        this.snack_name = snack_name;
         this.quantity = quantity;
         this.cost = cost;
         this.button = button ; // A3 B5 G2..etc
@@ -22,20 +22,20 @@ public class Snack {
 
     // id getter
     public float getId() {
-        return id;
+        return snack_id;
     }
     // id setter
-    public void setId(float id) {
+    public void setId(float snack_id) {
         // call setId on the result of an integer (or float like 5.0) * vendorCode
-        this.id = id;
+        this.snack_id = snack_id;
     }
     // name getter
     public String getName() {
-        return name;
+        return snack_name;
     }
     // name setter
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String snack_name) {
+        this.snack_name = snack_name;
     }
     // cost getter
     public float getCost() {
@@ -62,7 +62,7 @@ public class Snack {
         this.quantity += quantity;
     }
     // buy snack (receives 1 arg, int)
-    // public int buySnack(int snack-q) {
+    // public int buySnack(int quantity, String snack) {
 
     // }
     // get total cost given a quantity
