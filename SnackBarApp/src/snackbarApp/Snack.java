@@ -74,8 +74,11 @@ public class Snack extends VendingMachine {
     // }
     // get total cost given a quantity
     public void getTotal(int quantity, String choice) {
-        // gonna need to search an object here.
+        // check for snack by name
+        // find cost
+        // mul cost quantity
+        // return
         float snack;
-        // choice = button number,
+        // choice = button number (kick back string/float id?),
     }
 }

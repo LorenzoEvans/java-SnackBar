@@ -23,31 +23,30 @@ public class Customer {
         this.name = name;
     }
 
-    private boolean checkBalance(float cost) {
+    public boolean checkBalance(float cost) {
+        // check if there's enough cash in balance [done]
         if (cash >= cost) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
 
     public void alterBalance(float cost){
+         // alter the cash balance, subtracting the cost [done]
         float new_balance = 0.0f;
         if (checkBalance(cost)) {
             new_balance = cash - cost;
             cash = new_balance;
         }
+        else {
+            throw new java.lang.Error("Not enough cash in balance");
+        }
     }
 
-
     // to make a purchase we must:
-        // check if there's enough cash in balance
-            // check cash should be it's own function
         // check if there's enough stock
             // check stock should be a function but...on the Vending machine
-        // alter the cash balance, subtracting the cost 
             // this is done on the Customer object bc it has the cash
-        // done
 
 }
