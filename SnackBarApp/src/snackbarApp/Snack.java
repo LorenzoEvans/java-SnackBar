@@ -9,7 +9,14 @@ public class Snack extends VendingMachine {
     private float vendorCode = 0.0850f;
     private int machineId;
     
-    public Snack(String snack_name, int quantity, float cost, int machineId, String button, float snack_id, String vending_machine_name, int id) {
+    public Snack(String snack_name, 
+                 int quantity, 
+                 float cost, 
+                 int machineId, 
+                 String button, 
+                 float snack_id, 
+                 String vending_machine_name, 
+                 int id) {
         super(vending_machine_name, id);
         snackID++;
         snack_id = snackID;

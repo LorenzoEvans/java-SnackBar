@@ -23,18 +23,22 @@ public class Customer {
         this.name = name;
     }
 
-    public float checkBalance(float cost) {
-        float new_balance = 0.00f;
+    private boolean checkBalance(float cost) {
         if (cash >= cost) {
-            new_balance = cash - cost;
-            return new_balance;
+            return true;
         }
         else {
-            throw new java.lang.Error("Not enough cash in balance.");
+            return false;
         }
-        
     }
 
+    public void alterBalance(float cost){
+        float new_balance = 0.0f;
+        if (checkBalance(cost)) {
+            new_balance = cash - cost;
+            cash = new_balance;
+        }
+    }
 
 
     // to make a purchase we must:
