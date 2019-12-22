@@ -17,7 +17,7 @@ public class Snack extends VendingMachine {
                  float snack_id, 
                  String vending_machine_name, 
                  int id) {
-        super(vending_machine_name, id);
+        super(vending_machine_name, snack_inventory);
         snackID++;
         snack_id = snackID;
         this.snack_name = snack_name;
