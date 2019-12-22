@@ -21,7 +21,7 @@ public class VendingMachine {
         // inventory.put("Danish", 15);
         // inventory.put("Twizzlers", 9);
         // ** we'll swap them out for now **
-        this.snack_inventory = stock;
+        VendingMachine.snack_inventory = stock;
     }
 
     // getter for name

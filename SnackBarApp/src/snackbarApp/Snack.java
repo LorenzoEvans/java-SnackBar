@@ -13,7 +13,6 @@ public class Snack extends VendingMachine {
                  int quantity, 
                  float cost, 
                  int machineId, 
-                 String button, 
                  float snack_id, 
                  String vending_machine_name, 
                  int id) {
@@ -23,7 +22,6 @@ public class Snack extends VendingMachine {
         this.snack_name = snack_name;
         this.quantity = quantity;
         this.cost = cost;
-        this.button = button ; // A3 B5 G2..etc
         this.machineId = machineId;
     }
 
