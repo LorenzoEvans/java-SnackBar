@@ -4,6 +4,7 @@ public class VendingMachine {
     private static float machineID = 0.0f;
     public static float vending_machine_id;
     private float machineVendorCode = 0.287f;
+    // vendor code unique to vending machines
     public String vending_machine_name;
     // how do we represent inventory?
     public static HashMap<String, Integer> snack_inventory = new HashMap<>();

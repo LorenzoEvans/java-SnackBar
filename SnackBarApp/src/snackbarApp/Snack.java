@@ -1,22 +1,24 @@
 package snackbarApp;
 public class Snack extends VendingMachine {
     private static float snackID = 0.0f;
+    // incrementable ID, float for handling vendor code
     private float snack_id;
     private String snack_name;
     private String button;
     private int quantity;
     private float cost;
-    private float vendorCode = 0.0850f;
+    private float vendorCode = 0.850f;
+    // vendor codes come in certain "ranges", .857 => snack,
     private static float machineId;
     
     public Snack(String snack_name, 
                  int quantity, 
                  float cost, 
-                 float machineId, 
-                 String vending_machine_name, 
-                 int id) {
+                 String vending_machine_name) {
         super(vending_machine_name, snack_inventory, vending_machine_id);
+        // gotta please the parent class constructor for inheritance
         snackID += snackID++ * vendorCode;
+        // swap snackID with it's incremented value * vendorCode
         snack_id = snackID;
         this.snack_name = snack_name;
         this.quantity = quantity;
@@ -50,12 +52,12 @@ public class Snack extends VendingMachine {
         this.cost = cost;
     }
     // machineId getter
-    public int getMachineId() {
+    public float getMachineId() {
         return machineId;
     }
     // machineId setter
-    public void setMachineId(int machineId) {
-        this.machineId = machineId;
+    public void setMachineId(float machineId) {
+        Snack.machineId = machineId;
     }
     // quantity getter
     public int getQuantity() {
