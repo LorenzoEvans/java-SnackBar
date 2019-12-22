@@ -1,16 +1,17 @@
 package snackbarApp;
 import java.util.HashMap;
 public class VendingMachine {
-    private static float maxID = 0 * 0.287f;
-    private float vending_machine_id;
+    private static float machineID = 0.0f;
+    public static float vending_machine_id;
+    private float machineVendorCode = 0.287f;
     public String vending_machine_name;
     // how do we represent inventory?
     public static HashMap<String, Integer> snack_inventory = new HashMap<>();
 
     // constructor
-    public VendingMachine(String new_machine_name, HashMap<String, Integer> inventory) {
-        maxID++;
-        vending_machine_id = maxID;
+    public VendingMachine(String new_machine_name, HashMap<String, Integer> inventory, float vending_machine_id) {
+        machineID += machineID++ * machineVendorCode;
+        vending_machine_id = machineID;
         snack_inventory = inventory;
         vending_machine_name = new_machine_name;
     }

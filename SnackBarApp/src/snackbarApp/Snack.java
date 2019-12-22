@@ -1,28 +1,27 @@
 package snackbarApp;
 public class Snack extends VendingMachine {
-    private static float snackID = 0 * 0.850f;
+    private static float snackID = 0.0f;
     private float snack_id;
     private String snack_name;
     private String button;
     private int quantity;
     private float cost;
     private float vendorCode = 0.0850f;
-    private int machineId;
+    private static float machineId;
     
     public Snack(String snack_name, 
                  int quantity, 
                  float cost, 
-                 int machineId, 
-                 float snack_id, 
+                 float machineId, 
                  String vending_machine_name, 
                  int id) {
-        super(vending_machine_name, snack_inventory);
-        snackID++;
+        super(vending_machine_name, snack_inventory, vending_machine_id);
+        snackID += snackID++ * vendorCode;
         snack_id = snackID;
         this.snack_name = snack_name;
         this.quantity = quantity;
         this.cost = cost;
-        this.machineId = machineId;
+        Snack.machineId = vending_machine_id;
     }
 
     // id getter
