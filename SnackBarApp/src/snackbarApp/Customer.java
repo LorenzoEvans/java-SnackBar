@@ -55,7 +55,15 @@ public class Customer {
             // do we have enough to buy the quantity we want?
             // if snack quantity * cost <= cash_balance
     }
+
+    @Override
+    public String toString() {
+        String rtnStr;
+        rtnStr = "Name: " + name + "\n" + "Cash Balance: " + cash;
+        return rtnStr;
+    }
 }
+
 
 
 
@@ -64,4 +72,3 @@ public class Customer {
             // check stock should be a function but...on the Vending machine
             // this is done on the Customer object bc it has the cash
 
-}

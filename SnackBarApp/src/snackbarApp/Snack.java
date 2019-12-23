@@ -16,7 +16,7 @@ public class Snack extends VendingMachine {
                  int quantity, 
                  float cost, 
                  String vending_machine_name) {
-        super(vending_machine_name, snack_inventory, vending_machine_id);
+        super(vending_machine_name, snack_inventory);
         // gotta please the parent class constructor for inheritance
         snackID += snackID++ * vendorCode;
         // swap snackID with it's incremented value * vendorCode
@@ -80,5 +80,11 @@ public class Snack extends VendingMachine {
         // return
         float snack;
         // choice = button number (kick back string/float id?),
+    }
+
+    @Override
+    public String toString() {
+        String rtnStr;
+        rtnStr = "Snack Name: " + snack_name + "\n" + "Quantity: " + quantity + "\n" + "Cost: " + cost;
     }
 }
