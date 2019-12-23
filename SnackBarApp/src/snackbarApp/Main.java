@@ -16,15 +16,30 @@ public class Main {
         Snack water = new Snack("Dasani", 20, 2.75f, "Drink");
         
         // food machine
-        ArrayList<Snack> food_inventory = new ArrayList<>();
+        ArrayList<Snack> food_inventory = new ArrayList<Snack>();
+        
         food_inventory.add(chips);
         food_inventory.add(chocolate_bar);
         food_inventory.add(pretzel);
+
+        ArrayList<Snack> drink_inventory = new ArrayList<Snack>();
+
+        drink_inventory.add(soda);
+        drink_inventory.add(water);
+
+        ArrayList<Snack> office_inventory = new ArrayList<Snack>();
+
+        office_inventory.add(chips);
+        office_inventory.add(chocolate_bar);
+        office_inventory.add(pretzel);
+        office_inventory.add(soda);
+        office_inventory.add(water);
+
         VendingMachine food = new VendingMachine("Food", food_inventory);
         // drink machine
-        VendingMachine drink = new VendingMachine("Drink");
+        VendingMachine drink = new VendingMachine("Drink", drink_inventory);
         // office machine
-        VendingMachine office = new VendingMachine("Office");
+        VendingMachine office = new VendingMachine("Office", office_inventory);
         // food.setInventory({"Chips",});
         System.out.println("Almost there");
     }

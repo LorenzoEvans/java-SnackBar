@@ -11,7 +11,7 @@ public class VendingMachine {
     // public static ArrayList<HashMap<HashMap<String, Integer>, HashMap<String, Integer>>> snack_inventory = new ArrayList<>();
 
     // constructor
-    public VendingMachine(String new_machine_name, ArrayList<Snack> inventory, float vending_machine_id) {
+    public VendingMachine(String new_machine_name, ArrayList<Snack> inventory) {
         machineID += machineID++ * machineVendorCode;
         vending_machine_id = machineID;
         snack_inventory = inventory;
