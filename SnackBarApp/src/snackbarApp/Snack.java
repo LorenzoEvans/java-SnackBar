@@ -1,5 +1,6 @@
 package snackbarApp;
 public class Snack extends VendingMachine {
+    // I SHOULD EXTEND THIS TO SNACK TYPES, WOULDN'T THAT BE FANCY!
     private static float snackID = 0.0f;
     // incrementable ID, float for handling vendor code
     private float snack_id;
