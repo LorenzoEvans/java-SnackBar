@@ -86,5 +86,6 @@ public class Snack extends VendingMachine {
     public String toString() {
         String rtnStr;
         rtnStr = "Snack Name: " + snack_name + "\n" + "Quantity: " + quantity + "\n" + "Cost: " + cost;
+        return rtnStr;
     }
 }

@@ -50,10 +50,16 @@ public class Customer {
     public void buySnack(String snack, int quantity, VendingMachine machine) {
             // does vending machine have snack? 
             // if snack is in machine.inventory
-            // does it have *enough* of the snack?
-            // if snack quantity >= purchase quantity
-            // do we have enough to buy the quantity we want?
-            // if snack quantity * cost <= cash_balance
+                // inventory is an array of "snacks"
+                // for every element in the array, are any of their names
+                // equivalent to snack?
+                // if so:
+                    // does it have *enough* of the snack?
+                    // does snack quantity >= purchase quantity
+                        // if so:
+                            // do we have enough to buy the quantity we want?
+                            // if snack quantity * cost <= cash_balance
+                                // make purchase
     }
 
     @Override
