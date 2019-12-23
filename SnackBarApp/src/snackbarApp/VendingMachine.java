@@ -7,9 +7,7 @@ public class VendingMachine {
     // vendor code unique to vending machines
     public String vending_machine_name;
     // how do we represent inventory?
-    public static ArrayList<Snack> snack_inventory = new ArrayList<>(); 
-    // public static ArrayList<HashMap<HashMap<String, Integer>, HashMap<String, Integer>>> snack_inventory = new ArrayList<>();
-
+    public static ArrayList<Snack> snack_inventory = new ArrayList<Snack>(); 
     // constructor
     public VendingMachine(String new_machine_name, ArrayList<Snack> inventory) {
         machineID += machineID++ * machineVendorCode;

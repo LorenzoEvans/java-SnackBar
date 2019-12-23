@@ -4,7 +4,7 @@ public class Snack extends VendingMachine {
     private static float snackID = 0.0f;
     // incrementable ID, float for handling vendor code
     private float snack_id;
-    private String snack_name;
+    public String snack_name;
     private String button;
     private int quantity;
     private float cost;

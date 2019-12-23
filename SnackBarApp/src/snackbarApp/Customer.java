@@ -1,5 +1,7 @@
 package snackbarApp;
 
+import java.util.ArrayList;
+
 public class Customer {
     private static float maxID = 0 * 0.347f;
     private float id;
@@ -42,9 +44,6 @@ public class Customer {
         else {
             throw new java.lang.Error("Not enough cash in balance");
         }
-
-    
-
     }
 
     public void buySnack(String snack, int quantity, VendingMachine machine) {
@@ -60,6 +59,21 @@ public class Customer {
                             // do we have enough to buy the quantity we want?
                             // if snack quantity * cost <= cash_balance
                                 // make purchase
+        int inventory_size = machine.snack_inventory.size();
+        ArrayList<Snack> inventory = machine.snack_inventory;
+        for (int i = 0; i <= inventory_size; i++) {
+            Snack cur_snack = inventory.get(i);
+            if (cur_snack.snack_name == snack && cur_snack.getQuantity() >= quantity) {
+                if (this.cash >= (quantity * cur_snack.getCost())) {
+                    this.cash -= (quantity * cur_snack.getCost());
+                } else {
+                    throw new java.lang.Error("Not enough cash in balance.");
+                }
+            }
+            else if (cur_snack.snack_name == snack && cur_snack.getQuantity() <= quantity) {
+                throw new java.lang.Error("Not enough " + cur_snack.snack_name + "'s to fill order");
+            } else { throw new java.lang.Error("Sorry, the snack you requested is not in this machine");}
+        }
     }
 
     @Override
