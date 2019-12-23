@@ -40,7 +40,7 @@ public class Main {
         VendingMachine drink = new VendingMachine("Drink", drink_inventory);
         // office machine
         VendingMachine office = new VendingMachine("Office", office_inventory);
-        // food.setInventory({"Chips",});
+        
         System.out.println("Almost there");
     }
 

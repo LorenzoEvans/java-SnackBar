@@ -42,7 +42,22 @@ public class Customer {
         else {
             throw new java.lang.Error("Not enough cash in balance");
         }
+
+    
+
     }
+
+    public void buySnack(String snack, int quantity, VendingMachine machine) {
+            // does vending machine have snack? 
+            // if snack is in machine.inventory
+            // does it have *enough* of the snack?
+            // if snack quantity >= purchase quantity
+            // do we have enough to buy the quantity we want?
+            // if snack quantity * cost <= cash_balance
+    }
+}
+
+
 
     // to make a purchase we must:
         // check if there's enough stock

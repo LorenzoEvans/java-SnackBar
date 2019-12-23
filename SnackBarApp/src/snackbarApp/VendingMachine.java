@@ -27,6 +27,11 @@ public class VendingMachine {
         VendingMachine.snack_inventory = stock;
     }
 
+    public ArrayList<Snack> getInventory() {
+        // probably gonna be a pointer.
+        return snack_inventory;
+    }
+
     // getter for name
     public String getVendingMachineName() {
         return vending_machine_name;
