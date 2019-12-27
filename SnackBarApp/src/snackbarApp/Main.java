@@ -40,7 +40,16 @@ public class Main {
         // office machine
         VendingMachine office = new VendingMachine("Office", office_inventory);
 
-        System.out.println("Almost there");
+        jane.buySnack("Soda", 3, drink);
+
+        System.out.println(jane.getCash());
+        System.out.println(drink.snack_inventory.get(0).getQuantity());
+
+        jane.buySnack("Pretzel", 1, office);
+
+        System.out.println(jane.getCash());
+        System.out.println(office.snack_inventory.get(2).getQuantity());
+
     }
 
 }

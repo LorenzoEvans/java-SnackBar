@@ -24,7 +24,9 @@ public class Customer {
     public void setCustomerName(String name) {
         this.name = name;
     }
-
+    public float getCash() {
+        return cash;
+    }
     public boolean checkBalance(float cost) {
         // check if there's enough cash in balance [done]
         if (cash >= cost) {
