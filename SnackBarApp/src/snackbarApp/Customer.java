@@ -27,6 +27,11 @@ public class Customer {
     public float getCash() {
         return cash;
     }
+
+    public void addCash(float cash) {
+        this.cash += cash;
+    }
+    
     public boolean checkBalance(float cost) {
         // check if there's enough cash in balance [done]
         if (cash >= cost) {
