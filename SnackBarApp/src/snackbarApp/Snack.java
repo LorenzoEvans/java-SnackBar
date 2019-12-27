@@ -85,7 +85,7 @@ public class Snack extends VendingMachine {
     @Override
     public String toString() {
         String rtnStr;
-        rtnStr = "Snack Name: " + snack_name + "\n" + "Quantity: " + quantity + "\n" + "Cost: " + cost;
+        rtnStr = "Snack Name: " + snack_name + "\n" + "Quantity: " + quantity + "\n" + "Cost: " + cost + "\n" + "Vending Machine Name: " + vending_machine_name + "\n" + "Total Cost: " + (cost * quantity) + "\n" ;
         return rtnStr;
     }
 }

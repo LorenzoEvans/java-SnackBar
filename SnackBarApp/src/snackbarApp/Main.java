@@ -63,8 +63,12 @@ public class Main {
         jane.buySnack("Chocolate-Bar", 1, office);
         System.out.println(jane.getCash());
         System.out.println(office.snack_inventory.get(1).getQuantity());
+        office.setSnack("Pretzel", 12);
+        bob.buySnack("Pretzel", 3, office);
+        System.out.println(bob.getCash());
+        System.out.println(office.snack_inventory.get(2).getQuantity());
 
-
+        
 
     }
 

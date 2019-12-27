@@ -25,6 +25,17 @@ public class VendingMachine {
         VendingMachine.snack_inventory = stock;
     }
 
+    public void setSnack(String snack, int quantity) {
+        int inventory_size = this.snack_inventory.size();
+        ArrayList<Snack> inventory = this.snack_inventory;
+        for (int i = 0; i <= inventory_size; i++) {
+            if (inventory.get(i).snack_name == snack) {
+                inventory.get(i).setQuantity(quantity);
+            }
+            else { throw new java.lang.Error("Snack not in machine");}
+        }
+    }
+
     public ArrayList<Snack> getInventory() {
         // probably gonna be a pointer.
         return snack_inventory;
