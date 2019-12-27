@@ -40,35 +40,37 @@ public class Main {
         // office machine
         VendingMachine office = new VendingMachine("Office", office_inventory);
         // jane buys three sodas
-        jane.buySnack("Soda", 3, drink);
-        // check jane's balance
-        System.out.println(jane.getCash());
-        // check drink quantity
-        System.out.println(drink.snack_inventory.get(0).getQuantity());
+        jane.buySnack("Pepsi", 3, drink);
+        // System.out.println(drink.snack_inventory);
+        // System.out.println(drink.snack_inventory);
+        // // check jane's balance
+        // System.out.println(jane.getCash());
+        // // check drink quantity
+        // System.out.println(drink.snack_inventory.get(0).getQuantity());
 
-        // jane buys one pretzel
-        jane.buySnack("Pretzel", 1, office);
-        // check janes balance
-        System.out.println(jane.getCash());
-        // check pretzel quantity
-        System.out.println(office.snack_inventory.get(2).getQuantity());
+        // // jane buys one pretzel
+        // jane.buySnack("Pretzel", 1, office);
+        // // check janes balance
+        // System.out.println(jane.getCash());
+        // // check pretzel quantity
+        // System.out.println(office.snack_inventory.get(2).getQuantity());
 
-        // bob buys two sodas
-        bob.buySnack("Pepsi", 2, drink);
-        // check bobs balance
-        System.out.println(bob.getCash());
-        // check drink quantity
-        System.out.println(drink.snack_inventory.get(0).getQuantity());
-        jane.addCash(10.00f);
-        jane.buySnack("Chocolate-Bar", 1, office);
-        System.out.println(jane.getCash());
-        System.out.println(office.snack_inventory.get(1).getQuantity());
-        office.setSnack("Pretzel", 12);
-        bob.buySnack("Pretzel", 3, office);
-        System.out.println(bob.getCash());
-        System.out.println(office.snack_inventory.get(2).getQuantity());
+        // // bob buys two sodas
+        // bob.buySnack("Pepsi", 2, drink);
+        // // check bobs balance
+        // System.out.println(bob.getCash());
+        // // check drink quantity
+        // System.out.println(drink.snack_inventory.get(0).getQuantity());
+        // jane.addCash(10.00f);
+        // jane.buySnack("Chocolate-Bar", 1, office);
+        // System.out.println(jane.getCash());
+        // System.out.println(office.snack_inventory.get(1).getQuantity());
+        // office.setSnack("Pretzel", 12);
+        // bob.buySnack("Pretzel", 3, office);
+        // System.out.println(bob.getCash());
+        // System.out.println(office.snack_inventory.get(2).getQuantity());
 
-        
+
 
     }
 

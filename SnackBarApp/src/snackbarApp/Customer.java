@@ -31,7 +31,7 @@ public class Customer {
     public void addCash(float cash) {
         this.cash += cash;
     }
-    
+
     public boolean checkBalance(float cost) {
         // check if there's enough cash in balance [done]
         if (cash >= cost) {
@@ -66,7 +66,7 @@ public class Customer {
                             // do we have enough to buy the quantity we want?
                             // if snack quantity * cost <= cash_balance
                                 // make purchase
-        int inventory_size = machine.snack_inventory.size();
+        int inventory_size = machine.snack_inventory.size() - 1;
         ArrayList<Snack> inventory = machine.snack_inventory;
         for (int i = 0; i <= inventory_size; i++) {
             Snack cur_snack = inventory.get(i);
@@ -79,7 +79,11 @@ public class Customer {
             }
             else if (cur_snack.snack_name == snack && cur_snack.getQuantity() <= quantity) {
                 throw new java.lang.Error("Not enough " + cur_snack.snack_name + "'s to fill order");
-            } else { throw new java.lang.Error("Sorry, the snack you requested is not in this machine");}
+            } 
+            else { 
+                // throw new java.lang.Error("Sorry, the snack you requested is not in this machine");
+                System.out.println(snack);
+            }
         }
     }
 

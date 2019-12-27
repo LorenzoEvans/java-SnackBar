@@ -82,10 +82,10 @@ public class Snack extends VendingMachine {
         // choice = button number (kick back string/float id?),
     }
 
-    @Override
-    public String toString() {
-        String rtnStr;
-        rtnStr = "Snack Name: " + snack_name + "\n" + "Quantity: " + quantity + "\n" + "Cost: " + cost + "\n" + "Vending Machine Name: " + vending_machine_name + "\n" + "Total Cost: " + (cost * quantity) + "\n" ;
-        return rtnStr;
-    }
+    // @Override
+    // public String toString() {
+    //     String rtnStr;
+    //     rtnStr = "Snack Name: " + snack_name + "\n" + "Quantity: " + quantity + "\n" + "Cost: " + cost + "\n" + "Vending Machine Name: " + vending_machine_name + "\n" + "Total Cost: " + (cost * quantity) + "\n" ;
+    //     return rtnStr;
+    // }
 }
